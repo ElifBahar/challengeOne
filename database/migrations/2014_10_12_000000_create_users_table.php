@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('school_number')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('type')->default(1)->comment("0-hoca , 1-ogrenci");
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
