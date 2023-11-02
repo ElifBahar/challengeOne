@@ -10,22 +10,40 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Name') }}" />
+                <x-label for="tc" value="TC No :" />
+                <x-input id="tc" class="block mt-1 w-full" type="text" name="tc" :value="old('tc')" required autofocus autocomplete="tc" />
+            </div>
+
+            <div>
+                <x-label for="name" value="Adınız :" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
+            <div>
+                <x-label for="surname" value="Soyadınız :" />
+                <x-input id="surname" class="block mt-1 w-full" type="text" name="surname" :value="old('surname')" required autofocus autocomplete="surname" />
+            </div>
+
+            <div>
+                <x-label for="school_number" value="Okul No :" />
+                <x-input id="school_number" class="block mt-1 w-full" type="text" name="school_number" :value="old('school_number')" required autofocus autocomplete="school_number" />
+            </div>
+
+
+
+
             <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
+                <x-label for="email" value="E-Posta :" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
+                <x-label for="password" value="Şifre :" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-label for="password_confirmation" value="Şifre Onayı :" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -48,11 +66,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    Zaten Kayıtlı Mısınız?
                 </a>
 
                 <x-button class="ms-4">
-                    {{ __('Register') }}
+                    KAYIT OL
                 </x-button>
             </div>
         </form>
